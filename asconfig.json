@@ -1,0 +1,31 @@
+{
+    "targets": {
+        "debug": {
+            "outFile": "build/debug.wasm",
+            "textFile": "build/debug.wat",
+            "sourceMap": true,
+            "debug": true
+        },
+        "release": {
+            "outFile": "build/release.wasm",
+            "textFile": "build/release.wat",
+            "sourceMap": true,
+            "optimizeLevel": 3,
+            "shrinkLevel": 2,
+            "converge": false,
+            "noAssert": false
+        },
+        "test": {
+            "outFile": "tests/out.wasm",
+            "debug": true,
+            "sourceMap": false,
+            "pedantic": true
+        }
+    },
+    "options": {
+        "runtime": "stub",
+        "use": "abort=",
+        "disable": "bulk-memory",
+        "transform": "../stylus-blake2b-as/node_modules/stylus-sdk-as/dist/src/index.js"
+    }
+}

@@ -1,0 +1,6 @@
+/abi
+/deploy.sh
+/node_modules
+/build
+.env
+.env.*
